@@ -19,36 +19,34 @@
                     :current="request()->routeIs('dashboard') || request()->routeIs('admin.dashboard')" wire:navigate>
                     {{ __('Dashboard') }}</flux:navlist.item>
                 @if (auth()->user()->role === App\Enums\UserRole::Admin)
-                    <flux:navlist.item icon="list-bullet" :href="route('dashboard')" wire:navigate>
-                        {{ __('Product') }}
-                    </flux:navlist.item>
-                    <flux:navlist.item icon="list-bullet" :href="route('dashboard')" wire:navigate>
-                        {{ __('Users') }}
-                    </flux:navlist.item>
-                    <flux:navlist.item icon="list-bullet" :href="route('dashboard')" wire:navigate>
-                        {{ __('Orders') }}
-                    </flux:navlist.item>
-                    <flux:navlist.item icon="list-bullet" :href="route('dashboard')" wire:navigate>
-                        {{ __('Sales') }}
+                    <flux:navlist.item icon="list-bullet" :href="route('guru')" wire:navigate>
+                        {{ __('Data Guru') }}
                     </flux:navlist.item>
 
                     {{-- Dropdown Data Kelas --}}
-                    <flux:navlist.group heading="Data Kelas" collapsible default-open>
-                        <flux:navlist.item icon="book-open" :href="route('', ['kelas' => 'X-RPL'])"
+                    <flux:navlist.group  expandable heading="Data Siswa" class="lg:grid">
+                        <flux:navlist.item icon="book-open" :href="route('dashboard')"
                             wire:navigate>
                             X RPL
                         </flux:navlist.item>
-                        <flux:navlist.item icon="book-open" :href="route('', ['kelas' => 'XI-RPL'])"
+                        <flux:navlist.item icon="book-open" :href="route('dashboard')"
                             wire:navigate>
                             XI RPL
                         </flux:navlist.item>
-                        <flux:navlist.item icon="book-open" :href="route('', ['kelas' => 'XII-RPL'])"
+                        <flux:navlist.item icon="book-open" :href="route('dashboard')"
                             wire:navigate>
                             XII RPL
                         </flux:navlist.item>
                     </flux:navlist.group>
                 @endif
 
+
+                @if (auth()->user()->role === App\Enums\UserRole::Guru)
+                    <flux:navlist.item icon="list-bullet" :href="route('dashboard')" wire:navigate>{{ __('Product') }}
+                    </flux:navlist.item>
+                    <flux:navlist.item icon="list-bullet" :href="route('dashboard')" wire:navigate>{{ __('Account') }}
+                    </flux:navlist.item>
+                @endif
 
                 @if (auth()->user()->role === App\Enums\UserRole::User)
                     <flux:navlist.item icon="list-bullet" :href="route('dashboard')" wire:navigate>{{ __('Product') }}
