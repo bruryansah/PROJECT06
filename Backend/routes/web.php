@@ -6,12 +6,24 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\GuruController; // ✅ Import GuruController
+use App\Http\Controllers\GuruController;
 
 // ------------------ Home ------------------ //
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('beranda');
+})->name('beranda');
+
+Route::get('fitur', function () {
+    return view('fitur');
+})->name('fitur');
+
+Route::get('kontak', function () {
+    return view('kontak');
+})->name('kontak');
+
+Route::get('tentang', function () {
+    return view('tentang');
+})->name('tentang');
 
 // ------------------ Dashboard ------------------ //
 Route::view('dashboard', 'dashboard')
