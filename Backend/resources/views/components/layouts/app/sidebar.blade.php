@@ -25,15 +25,15 @@
 
                     {{-- Dropdown Data Kelas --}}
                     <flux:navlist.group  expandable heading="Data Siswa" class="lg:grid">
-                        <flux:navlist.item icon="book-open" :href="route('dashboard')"
+                        <flux:navlist.item icon="book-open" :href="route('xrpl')"
                             wire:navigate>
                             X RPL
                         </flux:navlist.item>
-                        <flux:navlist.item icon="book-open" :href="route('dashboard')"
+                        <flux:navlist.item icon="book-open" :href="route('xirpl')"
                             wire:navigate>
                             XI RPL
                         </flux:navlist.item>
-                        <flux:navlist.item icon="book-open" :href="route('dashboard')"
+                        <flux:navlist.item icon="book-open" :href="route('xiirpl')"
                             wire:navigate>
                             XII RPL
                         </flux:navlist.item>
