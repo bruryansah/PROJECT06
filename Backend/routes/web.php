@@ -23,6 +23,18 @@ Route::view('admin/guru', 'admin.guru')
     ->middleware(['auth', 'verified', 'admin'])
     ->name('guru');
 
+Route::view('admin/xrpl', 'admin.xrpl')
+    ->middleware(['auth', 'verified', 'admin'])
+    ->name('xrpl');
+
+Route::view('admin/xirpl', 'admin.xirpl')
+    ->middleware(['auth', 'verified', 'admin'])
+    ->name('xirpl');
+
+Route::view('admin/xiirpl', 'admin.xiirpl')
+    ->middleware(['auth', 'verified', 'admin'])
+    ->name('xiirpl');
+
 // Route::middleware(['auth','admin'])->group(function () {
 //     Route::redirect('orders', 'settings/profile');
 // });

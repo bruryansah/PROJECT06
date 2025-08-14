@@ -1,63 +1,42 @@
 <x-layouts.app :title="__('Admin Dashboard')">
-    <div class="overflow-x-auto border border-zinc-200 dark:border-zinc-700 rounded-lg">
-        <table class="w-full table-auto border-collapse text-center">
-            <thead class="bg-zinc-50 dark:bg-zinc-900">
-                <tr>
-                    <th class="px-6 py-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300">Id Guru</th>
-                    <th class="px-6 py-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300">Nama</th>
-                    <th class="px-6 py-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300">Email</th>
-                    <th class="px-6 py-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300">Mapel</th>
-                    <th class="px-6 py-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300">Kelas</th>
-                    <th class="px-6 py-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300">Opsi</th>
-                </tr>
-            </thead>
+<div class="p-6 bg-zinc-900 rounded-xl shadow-lg overflow-x-auto">
+    <h1 class="text-2xl font-bold text-white mb-4">Data Guru</h1>
+    <table class="min-w-full border-collapse border border-zinc-700 rounded-lg overflow-hidden">
+        <thead>
+            <tr class="bg-zinc-800">
+                <th class="px-6 py-3 text-left text-sm font-semibold text-white">Id Guru</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-white">Nama</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-white">Email</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-white">Mapel</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-white">Kelas</th>
+                <th class="px-6 py-3 text-center text-sm font-semibold text-white">Aksi</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-zinc-700">
+            <tr class="hover:bg-zinc-700 transition-colors duration-200">
+                <td class="px-6 py-4 text-sm text-zinc-300">1</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">Budi Santoso</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">budi@example.com</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">Matematika</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">X IPA 1</td>
+                <td class="px-6 py-4 flex justify-center gap-2">
+                    <button class="px-3 py-1 text-xs font-semibold text-white bg-yellow-500 rounded hover:bg-yellow-600 transition">Edit</button>
+                    <button class="px-3 py-1 text-xs font-semibold text-white bg-red-500 rounded hover:bg-red-600 transition">Hapus</button>
+                </td>
+            </tr>
+            <tr class="hover:bg-zinc-700 transition-colors duration-200">
+                <td class="px-6 py-4 text-sm text-zinc-300">2</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">Siti Aminah</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">siti@example.com</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">Bahasa Inggris</td>
+                <td class="px-6 py-4 text-sm text-zinc-300">X IPS 2</td>
+                <td class="px-6 py-4 flex justify-center gap-2">
+                    <button class="px-3 py-1 text-xs font-semibold text-white bg-yellow-500 rounded hover:bg-yellow-600 transition">Edit</button>
+                    <button class="px-3 py-1 text-xs font-semibold text-white bg-red-500 rounded hover:bg-red-600 transition">Hapus</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-            <tbody class="divide-y divide-zinc-200 dark:divide-zinc-700 bg-white dark:bg-zinc-800">
-                <tr>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">G001</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Ahmad Fauzi</td>
-                    <td class="px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400">ahmad.fauzi@example.com</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Matematika</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">X IPA 1</td>
-                    <td class="px-6 py-3 text-sm">
-                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md mr-2">Edit</button>
-                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Hapus</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">G002</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Siti Nurhaliza</td>
-                    <td class="px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400">siti.nurhaliza@example.com</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Bahasa Inggris</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">XI IPS 2</td>
-                    <td class="px-6 py-3 text-sm">
-                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md mr-2">Edit</button>
-                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Hapus</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">G003</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Budi Santoso</td>
-                    <td class="px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400">budi.santoso@example.com</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Fisika</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">XII IPA 3</td>
-                    <td class="px-6 py-3 text-sm">
-                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md mr-2">Edit</button>
-                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Hapus</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">G004</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Ratna Dewi</td>
-                    <td class="px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400">ratna.dewi@example.com</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">Kimia</td>
-                    <td class="px-6 py-3 text-sm text-zinc-900 dark:text-zinc-100">XI IPA 1</td>
-                    <td class="px-6 py-3 text-sm">
-                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md mr-2">Edit</button>
-                        <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Hapus</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 </x-layouts.app>
