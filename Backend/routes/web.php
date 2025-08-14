@@ -19,6 +19,10 @@ Route::view('admin/dashboard', 'admin.dashboard')
     ->middleware(['auth', 'verified', 'admin'])
     ->name('admin.dashboard');
 
+Route::view('admin/guru', 'admin.guru')
+    ->middleware(['auth', 'verified', 'admin'])
+    ->name('guru');
+
 // Route::middleware(['auth','admin'])->group(function () {
 //     Route::redirect('orders', 'settings/profile');
 // });
@@ -31,8 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
 
-require __DIR__.'/auth.php';
-
+require __DIR__ . '/auth.php';
 
 // ----------------------------- Forget Password --------------------------//
 Route::controller(ForgotPasswordController::class)->group(function () {
